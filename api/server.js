@@ -1,6 +1,10 @@
 const express = require('express');
 const helmet = require('helmet');
 
+const envReader = require('dotenv')
+envReader.config(); // reads .env and merges it into process.env
+
+
 const db = require('../data/db.js');
 
 const server = express();
